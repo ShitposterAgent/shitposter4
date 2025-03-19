@@ -30,15 +30,81 @@
 |
 
 ===========
-shitposter4
+ShitPoster4
 ===========
 
 
-    Add a short description here!
+    A powerful desktop automation agent with browser automation capabilities
 
 
-A longer description of your project goes here...
+ShitPoster4 is a comprehensive automation toolkit that combines browser automation through Playwright with desktop automation capabilities. This powerful tool lets you automate repetitive tasks across your entire computer.
 
+Features
+========
+
+* **Browser Automation**: Control web browsers with precision using Playwright
+* **Desktop Control**: Automate keyboard and mouse interactions on your desktop
+* **Cross-Platform**: Works on Windows, macOS, and Linux
+* **Easy-to-Use UI**: Web-based interface for configuring and running automations
+* **Extensible**: Add your own automation scripts and modules
+
+Getting Started
+==============
+
+Installation
+-----------
+
+To install the base package:
+
+.. code-block:: bash
+
+    pip install .
+
+For platform-specific features:
+
+.. code-block:: bash
+
+    # For Windows
+    pip install .[windows]
+    
+    # For macOS
+    pip install .[macos]
+    
+    # For all desktop automation features
+    pip install .[desktop]
+
+Running the Application
+---------------------
+
+1. Start the backend server:
+
+.. code-block:: bash
+
+    cd ffi/backend
+    cargo run
+
+2. Start the web interface:
+
+.. code-block:: bash
+
+    cd ffi/webui
+    npm run dev
+
+3. Open your browser and navigate to http://localhost:3000
+
+Architecture
+===========
+
+The application consists of three main components:
+
+1. **Python Core**: Handles desktop automation through PyAutoGUI and platform-specific APIs
+2. **Rust Backend**: Manages the Playwright browser automation and provides an API
+3. **Next.js Frontend**: User interface for configuring and running automations
+
+Security Notice
+=============
+
+This tool provides powerful automation capabilities. Use responsibly and only on systems and websites where you have permission to do so.
 
 .. _pyscaffold-notes:
 
